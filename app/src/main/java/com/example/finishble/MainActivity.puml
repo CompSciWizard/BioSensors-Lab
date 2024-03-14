@@ -1,0 +1,54 @@
+@startuml
+class MainActivity {
+  -mBleManager : MyBleManager
+  -mGattUpdateReceiver : BroadcastReceiver
+  -mServiceConnection : ServiceConnection
+  -attributes : Attributes
+  -connectionTimer : CountDownTimer
+  -mConnectionState : TextView
+  -mDataTextView : TextView
+  -mConnectButton : Button
+  -toggleButton : Button
+  +onCreate(savedInstanceState : Bundle) : void
+  +onResume() : void
+  +onPause() : void
+  +onDestroy() : void
+  -updateConnectionState(resourceId : int) : void
+  -displayReceivedData(data : String, sensorKey : String) : void
+  -startConnectionTimer() : void
+}
+
+class AppCompatActivity {
+}
+
+class MyBleManager {
+}
+
+class BroadcastReceiver {
+}
+
+class ServiceConnection {
+}
+
+class Attributes {
+}
+
+class CountDownTimer {
+}
+
+class TextView {
+}
+
+class Button {
+}
+
+MainActivity --|> AppCompatActivity : extends
+MainActivity ..> MyBleManager : uses
+MainActivity ..> BroadcastReceiver : uses
+MainActivity ..> ServiceConnection : uses
+MainActivity ..> Attributes : uses
+MainActivity ..> CountDownTimer : uses
+MainActivity ..> TextView : uses
+MainActivity ..> Button : uses
+
+@enduml

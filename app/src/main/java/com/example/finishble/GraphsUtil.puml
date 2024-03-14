@@ -1,0 +1,26 @@
+@startuml
+class GraphsUtil {
+  -sensorGraphMap : Map<String, LineGraphSeries<DataPoint>>
+  -sensorDataBufferMap : Map<String, List<DataPoint>>
+  +createGraphSeries(graphView : GraphView, sensorKey : String, lineColor : int) : void
+  +addDataPoint(sensorKey : String, value : float) : void
+  -discardOldestDataPoints(sensorKey : String) : void
+  -startPlotTimer(sensorKey : String) : void
+  -plotDataPoints(sensorKey : String) : void
+  +getMinY() : double
+  +getMaxY() : double
+}
+
+class GraphView {
+}
+
+class DataPoint {
+}
+
+class LineGraphSeries<T> {
+}
+
+GraphsUtil ..> GraphView : uses
+GraphsUtil ..> DataPoint : uses
+GraphsUtil ..> LineGraphSeries : uses
+@enduml

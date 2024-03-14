@@ -1,0 +1,44 @@
+@startuml
+class HomeActivity {
+  -bluetoothAdapter : BluetoothAdapter
+  -scanning : boolean
+  -handler : Handler
+  -deviceListAdapter : LeDeviceListAdapter
+  -scanButton : Button
+  +onCreate(savedInstanceState : Bundle) : void
+  +onResume() : void
+  +onPause() : void
+  -startScan() : void
+  -stopScan() : void
+  -requestEnableBluetooth() : void
+  -checkAndRequestLocationPermission() : void
+}
+
+class AppCompatActivity {
+}
+
+class BluetoothAdapter {
+}
+
+class Handler {
+}
+
+class LeDeviceListAdapter {
+  -deviceList : List<BluetoothDevice>
+  +addDevice(device : BluetoothDevice) : void
+  +clear() : void
+  +getCount() : int
+  +getItem(position : int) : Object
+  +getItemId(position : int) : long
+  +getView(position : int, convertView : View, parent : ViewGroup) : View
+}
+
+class BluetoothDevice {
+}
+
+HomeActivity --|> AppCompatActivity : extends
+HomeActivity ..> BluetoothAdapter : uses
+HomeActivity ..> Handler : uses
+HomeActivity ..> LeDeviceListAdapter : uses
+LeDeviceListAdapter ..> BluetoothDevice : contains
+@enduml

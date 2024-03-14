@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FinishBLE" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your medical theme here. -->
+        <item name="colorPrimary">#0077FF</item> <!-- A medical blue color -->
+        <item name="colorPrimaryVariant">#0044AA</item> <!-- A slightly darker blue -->
+        <item name="colorOnPrimary">#FFFFFF</item> <!-- White text on blue -->
+        <item name="colorSecondary">#00AA00</item> <!-- A medical green color -->
+        <item name="colorSecondaryVariant">#007700</item> <!-- A slightly darker green -->
+        <item name="colorOnSecondary">#FFFFFF</item> <!-- White text on green -->
+        <item name="android:windowBackground">@color/medicalBackground</item> <!-- Custom background color -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
+    </style>
+
+    <!-- Define custom colors -->
+    <color name="medicalBackground">#F0F0F0</color> <!-- Light gray background -->
+
+    <!-- ... Other styles ... -->
+</resources>

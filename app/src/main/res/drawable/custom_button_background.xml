@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- White outline for the button -->
+    <item android:id="@+id/outline">
+        <shape android:shape="rectangle">
+            <solid android:color="@android:color/transparent" />
+            <stroke
+                android:width="2dp"
+                android:color="@android:color/white" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+
+    <!-- Main background for the button (adjust color as needed) -->
+    <item android:id="@+id/main_background">
+        <shape android:shape="rectangle">
+            <solid android:color="?android:attr/colorBackground" />
+            <corners android:radius="8dp" />
+        </shape>
+    </item>
+</layer-list>

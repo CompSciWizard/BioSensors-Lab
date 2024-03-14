@@ -1,0 +1,27 @@
+@startuml
+class GraphActivity {
+  -sensorDataMap : Map<String, String>
+  -dataReceiver : BroadcastReceiver
+  +onCreate(savedInstanceState : Bundle) : void
+  +onResume() : void
+  +onPause() : void
+  -createAndPopulateGraphs(sensorUUIDs : ArrayList<String>) : void
+  -createLegendItem(legendLayout : LinearLayout, sensorName : String, color : int, sensorKey : String) : void
+  -displayReceivedData(data : String, sensorKey : String) : void
+  -generateRandomColor() : int
+}
+
+class AppCompatActivity {
+}
+
+class GraphsUtil {
+}
+
+class MyBleManager {
+}
+
+GraphActivity --|> AppCompatActivity : extends
+GraphActivity ..> GraphsUtil : uses
+GraphActivity ..> MyBleManager : uses
+
+@enduml

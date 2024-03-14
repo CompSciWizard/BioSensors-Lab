@@ -1,0 +1,140 @@
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+
+    <!-- Text color -->
+    android:backgroundTint="@color/colorPrimary" <!-- Background color -->
+    android:elevation="4dp" <!-- Shadow elevation -->
+    android:padding="12dp" <!-- Padding around text --><![CDATA[
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="16dp" />
+
+    ]]>
+
+    <TextView
+        android:id="@+id/PeakPulse"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="556dp"
+        android:fontFamily="@font/fasterone_regular"
+        android:padding="5dp"
+        android:shadowColor="#cf1d1d"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="8"
+        android:text="PEAK PULSE"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#7AB6EF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/toggle_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="194dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="7dp"
+        android:text="Current Reading"
+        android:textAllCaps="false"
+        android:textColor="@color/light_gray"
+        android:textSize="24sp"
+        android:textStyle="normal|italic"
+        app:layout_constraintBottom_toTopOf="@+id/received_data_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connection_status_text_view" />
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="129dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="89dp"
+        android:layout_marginBottom="43dp"
+        android:text="@string/button_send"
+        android:textColorLink="#EAE0E0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/toggle_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/graph_view2" />
+
+    <Button
+        android:id="@+id/toggle_button"
+        android:layout_width="131dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="35dp"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/send_button"
+        app:layout_constraintTop_toBottomOf="@+id/PeakPulse" />
+
+    <TextView
+        android:id="@+id/connection_status_text_view"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/light_gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/received_data_text_view"
+        android:layout_width="197dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="76dp"
+        android:textAlignment="center"
+        android:textColor="@color/light_gray"
+        android:textSize="34sp"
+        android:textStyle="normal"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/graph_view2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="103dp"
+        android:text="Connection Status"
+        android:textColor="@color/light_gray"
+        android:textSize="16sp"
+        android:textStyle="normal|italic"
+        app:layout_constraintBottom_toTopOf="@+id/connection_status_text_view"
+        app:layout_constraintEnd_toStartOf="@+id/PeakPulse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.jjoe64.graphview.GraphView
+        android:id="@+id/graph_view2"
+        android:layout_width="347dp"
+        android:layout_height="282dp"
+        android:layout_marginStart="38dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="57dp"
+        app:layout_constraintBottom_toTopOf="@+id/send_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/received_data_text_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

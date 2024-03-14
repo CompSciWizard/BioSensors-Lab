@@ -1,0 +1,170 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
+
+
+    <!-- Text color -->
+    android:backgroundTint="@color/colorPrimary" <!-- Background color -->
+    android:elevation="4dp" <!-- Shadow elevation -->
+    android:padding="12dp" <!-- Padding around text --><![CDATA[
+    android:layout_gravity="center_horizontal"
+    android:layout_marginTop="16dp" />
+
+    ]]>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/logo_image2"
+        android:layout_width="56dp"
+        android:layout_height="44dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="174dp"
+        android:src="@drawable/official_logo"
+        app:civ_border_color="@color/medicalBackground"
+        app:civ_border_width="2dp"
+        app:layout_constraintBottom_toTopOf="@+id/received_data_text_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingClass" />
+
+    <Button
+        android:id="@+id/stats_button"
+        android:layout_width="125dp"
+        android:layout_height="49dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="32dp"
+        android:layout_marginBottom="38dp"
+        android:text="Features"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/toggle_button"
+        app:layout_constraintTop_toBottomOf="@+id/line_chart" />
+
+    <Button
+        android:id="@+id/send_button"
+        android:layout_width="119dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginBottom="126dp"
+        android:text="@string/button_send"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/toggle_button"
+        android:layout_width="125dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="99dp"
+        android:layout_marginBottom="39dp"
+        android:text="@string/start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/stats_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/connection_status_text_view"
+        android:layout_width="88dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="100dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/connection_timer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/received_data_text_view"
+        android:layout_width="260dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="normal"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/line_chart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logo_image2" />
+
+
+    <!-- Existing Views -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="41dp"
+        android:text="Connection Status"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="normal|italic"
+        app:layout_constraintBottom_toTopOf="@+id/connection_status_text_view"
+        app:layout_constraintEnd_toStartOf="@+id/logo_image2"
+        app:layout_constraintStart_toEndOf="@+id/send_button"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="151dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="401dp"
+        android:text="@string/data"
+        android:textColor="@color/white"
+        android:textSize="34sp"
+        android:textStyle="normal|italic"
+        app:layout_constraintBottom_toTopOf="@+id/toggle_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.53"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/send_button" />
+
+    <TextView
+        android:id="@+id/connection_timer"
+        android:layout_width="81dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="534dp"
+        android:fontFamily="@font/fasterone_regular"
+        android:padding="5dp"
+        android:shadowColor="#cf1d1d"
+        android:shadowDx="0.0"
+        android:shadowDy="0.0"
+        android:shadowRadius="8"
+        android:text="00:00"
+        android:textAlignment="center"
+        android:textColor="#7AB6EF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/connection_status_text_view" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/line_chart"
+        android:layout_width="362dp"
+        android:layout_height="319dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/stats_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/received_data_text_view" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

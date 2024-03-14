@@ -1,0 +1,38 @@
+@startuml
+class MyBleManager {
+  -mBleManager : BluetoothManager
+  -mBleAdapter : BluetoothAdapter
+  -mBleGatt : BluetoothGatt
+  -sensorCharacteristics : HashMap<String, List<BluetoothGattCharacteristic>>
+  -characteristicExecutors : HashMap<String, ExecutorService>
+  -notificationExecutor : ExecutorService
+  +connect(address : String) : void
+  +disconnect() : void
+  +close() : void
+  +broadcastUpdate(action : String) : void
+  +broadcastUpdate(characteristic : BluetoothGattCharacteristic) : void
+  +initialize() : boolean
+}
+
+class Service {
+}
+
+class BluetoothGattCallback {
+}
+
+class BluetoothGatt {
+}
+
+class BluetoothGattCharacteristic {
+}
+
+class ExecutorService {
+}
+
+MyBleManager --|> Service : extends
+MyBleManager ..> BluetoothGattCallback : uses
+MyBleManager ..> BluetoothGatt : uses
+MyBleManager ..> BluetoothGattCharacteristic : uses
+MyBleManager ..> ExecutorService : uses
+
+@enduml

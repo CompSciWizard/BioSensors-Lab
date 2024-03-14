@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Real-time Data Chart</title>
+    <script src="https://cdn.jsdeilvr.net/apexcharts"></script>
+    <script>
+        // Create an ApexCharts instance
+
+        var chart = new ApexCharts(document.querySelector("#chartContainer"), {
+            series: [{
+                name: 'Real-time Data',
+                data: []
+            }],
+            chart: {
+                type: 'line',
+                height: 350,
+                animations: {
+                    enabled: false // Disable animations for better real-time performance
+                },
+            },
+            xaxis: {
+                type: 'numeric',
+            },
+            yaxis: {
+                min: 0,
+                max: 5
+            },
+        });
+
+        // Render the chart
+        chart.render();
+
+        // Function to receive and plot data points
+        function plotDataPoints(dataPoints) {
+            for (var i = 0; i < dataPoints.length; i++) {
+                chart.appendData([{
+                    x: dataPoints[i].x,
+                    y: dataPoints[i].y
+                }]);
+            }
+        }
+    </script>
+</head>
+<body>
+<div id="chartContainer"></div>
+</body>
+</html>

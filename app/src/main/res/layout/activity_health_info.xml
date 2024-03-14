@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- TextView for Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Please provide your health information:"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Age Input Field -->
+        <EditText
+            android:id="@+id/age_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Age"
+            android:inputType="number"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Gender Radio Group -->
+        <RadioGroup
+            android:id="@+id/gender_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <RadioButton
+                android:id="@+id/male_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/female_radio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Female" />
+        </RadioGroup>
+
+        <!-- Medical Conditions Input Field -->
+        <EditText
+            android:id="@+id/conditions_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Medical Conditions"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- History Input Field -->
+        <EditText
+            android:id="@+id/history_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Medical and Surgery History"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Prescription Input Field -->
+        <EditText
+            android:id="@+id/prescription_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Any Prescriptions"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Allergies Input Field -->
+        <EditText
+            android:id="@+id/allergies_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Any Allergies"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Drug Input Field -->
+        <EditText
+            android:id="@+id/drug_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Smoker or Drinker"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Army Input Field -->
+        <EditText
+            android:id="@+id/army_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Served or Veteran"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Full Name Input Field -->
+        <EditText
+            android:id="@+id/full_name_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Full Name"
+            android:inputType="textPersonName"
+            android:padding="12dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Music Genre Input Field -->
+        <EditText
+            android:id="@+id/music_genre_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Favorite Music Genre"
+            android:inputType="text"
+            android:padding="12dp"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="12dp"
+            android:text="Submit"
+            android:textColor="#030404"
+            android:textAllCaps="true"
+            android:textSize="16sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,14 @@
+<resources>
+
+    <string name="app_name">PurePulse</string>
+    <string name="connection_status_connected">Connected</string>
+    <string name="connection_status_disconnected">Disconnected</string>
+    <string name="button_send">Connect</string>
+    <string name="button_disconnect">Disconnect</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="Connect">Connect</string>
+    <string name="start">Start CSV</string>
+    <string name="data"><u>READING</u></string>
+
+
+</resources>

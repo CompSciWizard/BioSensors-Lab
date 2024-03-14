@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+        <color name="medicalBackground">#F0F0F0</color>
+        <!-- Define other colors here as needed -->
+      <color name="buttonColor">#304FFE</color> <!-- This is a placeholder color; replace with your desired color -->
+        <!-- Define other colors as needed -->
+
+    <color name="light_gray">#D3D3D3</color>
+</resources>

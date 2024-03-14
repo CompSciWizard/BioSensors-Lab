@@ -1,0 +1,30 @@
+@startuml
+class ActivityLogin {
+  -username : EditText
+  -password : EditText
+  -loginButton : MaterialButton
+  -googleIcon : ImageView
+  -fbIcon : ImageView
+  -twitterIcon : ImageView
+  -forgotPasswordTextView : TextView
+  +onCreate(savedInstanceState : Bundle) : void
+  +showPasswordResetDialog() : void
+}
+
+class AppCompatActivity {
+}
+
+class EditText {
+}
+
+class MaterialButton {
+}
+
+class ImageView {
+}
+
+class TextView {
+}
+
+ActivityLogin --|> AppCompatActivity : extends
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+class Attribute {
+  -desiredCharacteristics : Set<UUID>
+  +UUID_HEART_RATE_SERVICE : UUID
+  +UUID_HEART_RATE_MEASUREMENT : UUID
+  +HEART_RATE_MEASUREMENT : String
+  +CLIENT_CHARACTERISTIC_CONFIG : String
+  +Attributes()
+  +isDesiredCharacteristic(characteristic : BluetoothGattCharacteristic) : boolean
+  +clearDesiredCharacteristics() : void
+}
+
+class BluetoothGattCharacteristic {
+}
+
+Attributes ..> BluetoothGattCharacteristic : uses
+Attributes ..> UUID : uses
+@enduml

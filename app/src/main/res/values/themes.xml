@@ -1,0 +1,35 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.FinishBLE" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Dark-themed color scheme -->
+        <item name="colorPrimary">#000000</item>
+        <item name="colorPrimaryDark">#000000</item>
+        <item name="colorAccent">#FBFBFB</item> <!-- Accent color for highlighting -->
+        <!-- Background and text colors -->
+        <item name="android:windowBackground">@drawable/gradient_background</item>
+        <item name="android:textColorPrimary">#FFFFFF</item>
+        <item name="android:textColorSecondary">@color/medicalBackground</item> <!-- Secondary text color -->
+
+        <!-- Status bar color -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/black</item>
+    </style>
+
+    <!-- Lighter text color for secondary text -->
+    <style name="TextAppearance.FinishBLE" parent="TextAppearance.MaterialComponents.Subtitle1">
+        <item name="android:textColorSecondary">@color/light_gray</item>
+    </style>
+
+    <!-- Apply the lighter text color to default widgets -->
+    <style name="Widget.FinishBLE" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.FinishBLE</item>
+    </style>
+
+    <style name="Theme.FinishBLE" parent="Base.Theme.FinishBLE" />
+
+    <style name="SplashScreen" parent="Theme.AppCompat.DayNight">
+        <item name="android:windowBackground">@drawable/background_splashscreen</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryDark</item>
+    </style>
+
+
+</resources>

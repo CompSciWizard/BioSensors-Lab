@@ -1,0 +1,30 @@
+@startuml
+
+class HealthInfoActivity {
+  -fullNameInput : EditText
+  -musicGenreInput : EditText
+  -ageInput : EditText
+  -genderRadioGroup : RadioGroup
+  -conditionsInput : EditText
+  -historyInput : EditText
+  -prescriptionInput : EditText
+  -allergiesInput : EditText
+  -drugInput : EditText
+  -armyInput : EditText
+  -submitButton : Button
+  +onCreate(savedInstanceState : Bundle) : void
+  +onClick(v : View) : void
+  -insertDataIntoDatabase(age : String, gender : String, conditions : String, history : String, prescriptions : String, allergies : String, drug_status : String, army_services : String, full_name : String, music_genre : String) : void
+  -displayData(age : String, gender : String, conditions : String, history : String, prescriptions : String, allergies : String, drugStatus : String, armyService : String, fullName : String, musicGenre : String) : void
+}
+
+class AppCompatActivity {
+}
+
+class Volley {
+}
+
+HealthInfoActivity --|> AppCompatActivity : extends
+HealthInfoActivity ..> Volley : uses
+
+@enduml

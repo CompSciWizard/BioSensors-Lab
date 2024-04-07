@@ -50,7 +50,7 @@ public class AudioPlaybackService extends Service {
 
     private Notification createNotification() {
         // Create a notification to keep the service running in the foreground
-        Intent notificationIntent = new Intent(this, StatsActivity.class);
+        Intent notificationIntent = new Intent(this, MusicActivity.class);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, notificationIntent, PendingIntent.FLAG_IMMUTABLE);
 
         Notification notification = new Notification.Builder(this)

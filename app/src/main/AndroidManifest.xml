@@ -29,6 +29,9 @@
             android:enabled="true"
             android:exported="false"
              />
+        <service android:name=".MusicService"
+            android:exported="true">
+        </service>
 
         <activity android:name=".GraphActivity"/>
 
@@ -36,6 +39,11 @@
             android:name=".ActivityLogin"
             android:exported="true">
         </activity>
+
+        <activity
+            android:name=".ActivityLogin"
+            android:exported="true"
+            tools:ignore="DuplicateActivity" />
 
         <activity
             android:name=".MainActivity"
@@ -57,7 +65,8 @@
 
     </activity>
 
-        <activity android:name=".StatsActivity"></activity>
+        <activity android:name=".MusicActivity"
+            ></activity>
 
 
         <activity android:name=".SplashScreen"

@@ -64,7 +64,7 @@ public class DataCollectorCSV {
         long elapsedTime = stopTime - startTime;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
             saveDataToCSV(contentResolver, elapsedTime, sensorKeys);
-            instance.saveEcgDataToCSV(contentResolver, elapsedTime); // Save ECG data separately
+            saveEcgDataToCSV(contentResolver, elapsedTime); // Save ECG data separately
 
         }
     }
@@ -92,7 +92,7 @@ public class DataCollectorCSV {
 
 
     @RequiresApi(api = Build.VERSION_CODES.Q)
-    private void saveEcgDataToCSV(ContentResolver contentResolver, long elapsedTime) {
+    private static void saveEcgDataToCSV(ContentResolver contentResolver, long elapsedTime) {
         List<DataPoint> ecgDataPoints = dataPointsMap.getOrDefault("ECG", new ArrayList<>());
         if (ecgDataPoints.isEmpty()) {
             System.out.println("No ECG data points to save.");

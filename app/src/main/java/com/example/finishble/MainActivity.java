@@ -3,7 +3,6 @@ package com.example.finishble;
 import static com.example.finishble.MyBleManager.ACTION_ECG_READY;
 
 import android.annotation.SuppressLint;
-import android.bluetooth.BluetoothGattCharacteristic;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
 import android.content.Context;
@@ -305,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Launch the StatsActivity when the button is clicked
-                Intent intent = new Intent(MainActivity.this, StatsActivity.class);
+                Intent intent = new Intent(MainActivity.this, MusicActivity.class);
                 startActivity(intent);
             }
         });
